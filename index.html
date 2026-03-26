@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mr Kagan Barbershop Coleraine — Skin Fades, Hot Towel Shaves &amp; Sharp Cuts</title>
-<meta name="description" content="Coleraine's top-rated barbershop. Skin fades, hot towel shaves, beard trims and kids cuts. 4.9 stars from 196+ Google reviews. Open 7 days. Book online now.">
+<meta name="description" content="Coleraine's top-rated barbershop. Skin fades, hot towel shaves, beard trims and kids cuts. 4.9 stars from 206+ Google reviews. Open 7 days. Book online now.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -65,7 +65,14 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
   color: var(--dark-text); transition: color 0.2s;
 }
 .header-nav a:hover { color: var(--gold); }
-/* PLACEHOLDER: Add .btn-call-header here once phone number is confirmed */
+.btn-call-header {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--green-call); color: #fff; border: none; border-radius: 50px;
+  padding: 9px 18px; font-size: 0.88rem; font-weight: 600;
+  text-decoration: none; transition: background 0.2s, transform 0.2s;
+}
+.btn-call-header:hover { background: #1fb855; transform: translateY(-1px); }
+.btn-call-header svg { width: 16px; height: 16px; }
 .btn-cta-header {
   display: inline-flex; align-items: center;
   background: var(--gold); color: #fff; border-radius: 50px;
@@ -104,7 +111,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
 /* ============ HERO ============ */
 .hero {
   background: linear-gradient(rgba(26,26,30,0.58), rgba(26,26,30,0.58)),
-    url('IMAGES/Front Of Shop.png') center/cover no-repeat;
+    url('IMAGES/heroinside.png') center/cover no-repeat;
   min-height: 92vh; display: flex; align-items: center;
   padding: 120px 24px 80px;
   text-align: center;
@@ -206,7 +213,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
   display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
 }
 .about-img {
-  background: url('IMAGES/heroinside.png') center/cover no-repeat;
+  background: url('IMAGES/Front Of Shop.png') center/cover no-repeat;
   width: 100%; height: 420px; border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
@@ -315,7 +322,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
 .hours-table tr.today { background: rgba(168,121,79,0.08); border-radius: 8px; }
 .hours-table tr.today td { color: var(--gold); font-weight: 600; }
 .hours-img {
-  background: url('IMAGES/2021-10-31.jpg') center/cover no-repeat;
+  background: url('IMAGES/Nice Cut.png') center/cover no-repeat;
   width: 100%; height: 380px; border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
@@ -419,6 +426,18 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
 .footer-credit a { color: rgba(255,255,255,0.45); text-decoration: none; }
 .footer-credit a:hover { color: var(--gold-light); }
 
+/* ============ FLOATING WHATSAPP ============ */
+.whatsapp-float {
+  position: fixed; bottom: 24px; right: 24px; z-index: 998;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: #25D366; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+.whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(37,211,102,0.5); }
+.whatsapp-float svg { width: 32px; height: 32px; fill: #fff; }
+
 /* ============ ANIMATIONS ============ */
 .fade-up { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s ease; }
 .fade-up.will-animate { opacity: 0; transform: translateY(30px); }
@@ -440,7 +459,10 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
       <a href="#reviews">Reviews</a>
       <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
-      <!-- PLACEHOLDER: Add Call Us button here once phone number is confirmed -->
+      <a href="tel:07873110455" class="btn-call-header">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call Us
+      </a>
       <a href="https://booksy.com/en-gb/34766_mr-kagan-barbershop_barber_1520586_coleraine" target="_blank" rel="noopener" class="btn-cta-header">Book Now</a>
     </nav>
   </div>
@@ -454,7 +476,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
     <p class="hero-sub">Walk in looking ordinary. Walk out turning heads. Mr Kagan has been giving Coleraine's men and boys the sharpest cuts on the North Coast for 7+ years — and 196 five-star reviews prove it.</p>
     <div class="hero-rating">
       <span class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <span>4.9 stars from 196+ Google reviews</span>
+      <span>4.9 stars from 206+ Google reviews</span>
     </div>
     <a href="https://booksy.com/en-gb/34766_mr-kagan-barbershop_barber_1520586_coleraine" target="_blank" rel="noopener" class="btn-primary">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -473,7 +495,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
         <h4>4.9 Stars</h4>
-        <p>196+ Google Reviews</p>
+        <p>206+ Google Reviews</p>
       </div>
       <div class="trust-item">
         <div class="trust-icon">
@@ -554,7 +576,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
       </div>
 
       <div class="service-card fade-up">
-        <div class="service-card-img" style="background-image: url('IMAGES/unnamed-11.jpg');" role="img" aria-label="Full barbershop treatment"></div>
+        <div class="service-card-img" style="background-image: url('IMAGES/The Full Works.png');" role="img" aria-label="Full barbershop treatment"></div>
         <div class="service-card-body">
           <h3>The Full Works</h3>
           <p>Skin fade plus a full beard service — cut, shaped, hot towelled and finished to perfection. The complete package for lads who want to look their absolute best.</p>
@@ -622,7 +644,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
 <section class="reviews" id="reviews">
   <div class="container" style="text-align:center;">
     <div class="section-eyebrow fade-up">What Customers Say</div>
-    <h2 class="section-title fade-up">196+ Reviews. 4.9 Stars. Coleraine's Favourite Barbershop.</h2>
+    <h2 class="section-title fade-up">206+ Reviews. 4.9 Stars. Coleraine's Favourite Barbershop.</h2>
     <p class="section-sub fade-up">Don't take our word for it — here's what the lads are saying about Mr Kagan.</p>
 
     <div class="reviews-grid">
@@ -635,42 +657,42 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
 
       <div class="review-card fade-up">
         <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"The best hair experience and the salon was so busy I believe this backs up my rating."</p>
+        <p>"Nuri was amazing! He really knows his craft and works with great care and attention to detail. Great haircut, great experience. On top of that, he's very friendly and lovely to chat with which made the whole experience even better. I'll definitely be coming back to Nuri for my next haircut."</p>
+        <div class="review-name">Gordon</div>
+        <div class="review-source">Booksy Review</div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Excellent haircut, Mr Kagan is very talented and a super pleasant person to hang out with while he's taking care of your hair. Been going here for many years now, best barber in town."</p>
+        <div class="review-name">Verified Customer</div>
+        <div class="review-source">Google Review</div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Robert, an excellent barber, with experience and with a top listening of client wishes! Greetings from Switzerland."</p>
+        <div class="review-name">Verified Customer</div>
+        <div class="review-source">Google Review</div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Best barber in Coleraine, always has been. 10/10 service every time I visit."</p>
+        <div class="review-name">Verified Customer</div>
+        <div class="review-source">Google Review</div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"The best hair experience and the salon was so busy I believe this backs up my rating. Always a quality hair cut. 10/10 staff, they are always friendly and helpful."</p>
         <div class="review-name">Liam</div>
-        <div class="review-source">Google Review</div>
-      </div>
-
-      <div class="review-card fade-up">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"Always a quality hair cut. 10/10 staff. They are always friendly helpful."</p>
-        <div class="review-name">Steven</div>
-        <div class="review-source">Google Review</div>
-      </div>
-
-      <div class="review-card fade-up">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"Great staff always on time also.. always get what you ask for."</p>
-        <div class="review-name">Ryan</div>
-        <div class="review-source">Google Review</div>
-      </div>
-
-      <div class="review-card fade-up">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"Great haircut as always."</p>
-        <div class="review-name">A</div>
-        <div class="review-source">Google Review</div>
-      </div>
-
-      <div class="review-card fade-up">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"Great shop, lovely barbers."</p>
-        <div class="review-name">Matthew</div>
         <div class="review-source">Google Review</div>
       </div>
     </div>
 
     <div class="reviews-cta fade-up">
-      <a href="https://www.google.com/maps/search/?api=1&query=Mr+Kagan+Barbershop+Coleraine" target="_blank" rel="noopener" class="btn-outline">
+      <a href="https://www.google.com/maps/place/Mr+Kagan+Barber+Shop/@55.1319508,-6.6674523,17z/data=!3m1!4b1!4m6!3m5!1s0x48603b4ab3a67ba7:0x2e7469a9dfd2f7cb" target="_blank" rel="noopener" class="btn-outline">
         See All Reviews on Google
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
       </a>
@@ -754,7 +776,26 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
         <p>Walk-ins are always welcome, but you can also book your spot online through Booksy to skip the wait. We're right on Kingsgate Street in the heart of Coleraine.</p>
 
         <div class="contact-details">
-          <!-- PLACEHOLDER: Add phone contact detail here once number is confirmed -->
+          <div class="contact-detail">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 014.12 4.18 2 2 0 016.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" fill="none" stroke="#fff" stroke-width="2"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <div class="contact-detail-label">Phone</div>
+              <a href="tel:07873110455">07873 110 455</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-icon" style="background:var(--green-call);">
+              <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.253-.156-2.828.84.84-2.828-.156-.253A7.963 7.963 0 014 12a8 8 0 1116 0 8 8 0 01-8 8z"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <div class="contact-detail-label">WhatsApp</div>
+              <a href="https://wa.me/447873110455">Message on WhatsApp</a>
+            </div>
+          </div>
+
           <div class="contact-detail">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" fill="none" stroke="#fff" stroke-width="2"/><line x1="16" y1="2" x2="16" y2="6" fill="none" stroke="#fff" stroke-width="2"/><line x1="8" y1="2" x2="8" y2="6" fill="none" stroke="#fff" stroke-width="2"/><line x1="3" y1="10" x2="21" y2="10" fill="none" stroke="#fff" stroke-width="2"/></svg>
@@ -771,7 +812,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
             </div>
             <div class="contact-detail-text">
               <div class="contact-detail-label">Address</div>
-              <a href="https://www.google.com/maps/search/?api=1&query=Mr+Kagan+Barbershop+Kingsgate+Street+Coleraine" target="_blank" rel="noopener">Kingsgate Street, Coleraine</a>
+              <a href="https://www.google.com/maps/place/Mr+Kagan+Barber+Shop/@55.1319508,-6.6674523,17z/data=!3m1!4b1!4m6!3m5!1s0x48603b4ab3a67ba7:0x2e7469a9dfd2f7cb" target="_blank" rel="noopener">Kingsgate Street, Coleraine</a>
             </div>
           </div>
 
@@ -793,7 +834,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
           <a href="https://www.instagram.com/mrkaganbarbershop/" target="_blank" rel="noopener" aria-label="Instagram">
             <img src="IMAGES/instagram.webp" alt="Instagram">
           </a>
-          <a href="https://www.google.com/maps/search/?api=1&query=Mr+Kagan+Barbershop+Coleraine" target="_blank" rel="noopener" aria-label="Google">
+          <a href="https://www.google.com/maps/place/Mr+Kagan+Barber+Shop/@55.1319508,-6.6674523,17z/data=!3m1!4b1!4m6!3m5!1s0x48603b4ab3a67ba7:0x2e7469a9dfd2f7cb" target="_blank" rel="noopener" aria-label="Google">
             <img src="IMAGES/google.webp" alt="Google Reviews">
           </a>
         </div>
@@ -847,7 +888,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
 
 <!-- ============ MAP ============ -->
 <section class="map-section">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2290.0!2d-6.6670!3d55.1326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMr+Kagan+Barbershop+Kingsgate+Street+Coleraine!5e0!3m2!1sen!2suk!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mr Kagan Barbershop location on map"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2290.0!2d-6.6674523!3d55.1319508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48603b4ab3a67ba7%3A0x2e7469a9dfd2f7cb!2sMr+Kagan+Barber+Shop!5e0!3m2!1sen!2suk!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mr Kagan Barbershop location on map"></iframe>
 </section>
 
 <!-- ============ URGENCY BANNER ============ -->
@@ -861,6 +902,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--dark-text)
     </a>
   </div>
 </section>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a href="https://wa.me/447873110455" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.253-.156-2.828.84.84-2.828-.156-.253A7.963 7.963 0 014 12a8 8 0 1116 0 8 8 0 01-8 8z"/></svg>
+</a>
 
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
@@ -956,9 +1002,9 @@ form.addEventListener('submit', async (e) => {
           <div class="form-success-msg">
             <h3>Message Received!</h3>
             <p>Thanks for getting in touch. We'll be in contact soon.</p>
-            <p style="font-size:0.9rem;color:var(--light-text);">Want to book right now?</p>
-            <a href="https://booksy.com/en-gb/34766_mr-kagan-barbershop_barber_1520586_coleraine" target="_blank" rel="noopener" class="btn-primary" style="margin-top:12px;">
-              Book on Booksy
+            <p style="font-size:0.9rem;color:var(--light-text);">Want a faster reply?</p>
+            <a href="https://wa.me/447873110455" target="_blank" rel="noopener" class="btn-primary" style="margin-top:12px;background:#25D366;">
+              WhatsApp Us
             </a>
           </div>
         `;
